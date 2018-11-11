@@ -10,3 +10,8 @@ img{
 .imageSection{
     column-count: 3;
 }
+
+#gif{
+
+    visibility: hidden;
+}

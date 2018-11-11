@@ -29,6 +29,9 @@
 
   function search (searchTerm) {
 
+    // loading the gif image when searching for images
+    loadingGif();
+
     const search_url = `${API_URL}${searchTerm}&client_id=${accessKey}`
 
     return fetch(search_url)
@@ -52,4 +55,11 @@
       imageSection.appendChild(imageElement);  
     })
     
+  }
+
+  function loadingGif (){
+
+    const loadingGif = document.createElement('img');
+    loadingGif.src = "loading-vanilla.gif";
+    imageSection.appendChild(loadingGif);
   }
